@@ -37,7 +37,7 @@ And similarly for Fashion MNIST.
 
 In the file `demo_dnn-vae.py` (a code that may run 5-10 minutes on a laptop), we first train a DNN classifier on MNIST. And then a VAE on MNIST.
 
-We then generate data with VAE and use the DNN to predict the generated images labels. If the prediction is strong, (more than 95%) we accept the new data image.
+We then generate data with VAE and use the DNN to predict the generated images labels. If the prediction is strong, (more than 95%) we accept the new data image. This method needs revision, to make sure that the data is balanced (!), and the calibration and over/under-confidence analysis can make the case stronger, compared to directly taking the prediction of the DNN as real probability.
 
 We can see the strong prediction generated VAE data, it also makes sense to human eyes.
 
